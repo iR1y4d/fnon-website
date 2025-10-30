@@ -63,7 +63,7 @@ const Header = () => {
   };
 
   const IconLink = () => {
-    const iconSrc = isOpen ? "/icon_w.png" : "/icon.png";
+    const iconSrc = isOpen ? "icon_w.png" : "icon.png";
     const iconElement = (
       <img
         src={iconSrc}
@@ -92,7 +92,7 @@ const Header = () => {
         <div className="max-lg:container flex items-center justify-between">
           <IconLink />
           <img
-            src={isOpen ? "/close.svg" : "/menu.svg"}
+            src={isOpen ? "close.svg" : "menu.svg"}
             alt="menu"
             width={40}
             className="lg:hidden cursor-pointer relative z-100"
@@ -119,7 +119,7 @@ const Header = () => {
             ))}
             {isOpen && (
               <img
-                src="/menu-internal-icon.png"
+                src="menu-internal-icon.png"
                 alt="icon"
                 className="lg:hidden max-lg:-bottom-16 max-md:left-0 max-md:-bottom-10 max-sm:left-0 absolute -bottom-100 -left-5 opacity-50"
                 loading="lazy"

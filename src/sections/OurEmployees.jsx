@@ -25,7 +25,7 @@ const OurEmployees = () => {
             </div>
             <div className=" relative z-10 w-600 before:content-[''] before:w-full before:h-full before:bg-secondry before:shadow-2xl before:absolute before:-z-1 before:left-10 before:top-10 max-lg:max-w-120 max-md:max-w-80  ">
               <img
-                src="/ahmed1.jpeg"
+                src="ahmed1.jpeg"
                 alt=""
                 className=" w-full h-full "
                 loading="lazy"
