@@ -153,8 +153,8 @@ export const works = [
     time: "74",
     progress: "100%",
     images: {
-      thumbnail: "/images/qasr-aldiafah/2.JPG",
-      bigImage: "/images/qasr-aldiafah/2.JPG",
+      thumbnail: "images/qasr-aldiafah/2.JPG",
+      bigImage: "images/qasr-aldiafah/2.JPG",
       base: [
         // "/images/qasr-aldiafah/1.JPG",
         // "/images/qasr-aldiafah/2.JPG",
@@ -175,8 +175,8 @@ export const works = [
 
     progress: "20%",
     images: {
-      thumbnail: "/images/ncb-almarj/base/image3.JPG",
-      bigImage: "/images/ncb-almarj/base/image3.JPG",
+      thumbnail: "images/ncb-almarj/base/image3.JPG",
+      bigImage: "images/ncb-almarj/base/image3.JPG",
       base: almarjBase,
       mid: [],
       end: [],
@@ -191,8 +191,8 @@ export const works = [
     time: "74",
     progress: "80%",
     images: {
-      thumbnail: "/images/ncb-almarj/base/image5.JPG",
-      bigImage: "/images/ncb-almarj/base/image5.JPG",
+      thumbnail: "images/ncb-almarj/base/image5.JPG",
+      bigImage: "images/ncb-almarj/base/image5.JPG",
       base: tokrahBase,
       mid: tokrahMid,
       end: tokrahEnd,
@@ -208,8 +208,8 @@ export const works = [
     time: "74",
     progress: "80%",
     images: {
-      thumbnail: "/images/benghazi/end/1.JPG",
-      bigImage: "/src/images/benghazi/end/1.JPG",
+      thumbnail: "images/benghazi/end/1.JPG",
+      bigImage: "src/images/benghazi/end/1.JPG",
       base: benghaziBase,
       mid: benghaziMid,
       end: benghaziEnd,
@@ -224,9 +224,9 @@ export const works = [
     time: "74",
     progress: "100%",
     images: {
-      thumbnail: "/images/ncb-almarj/base/image4.JPG",
+      thumbnail: "images/ncb-almarj/base/image4.JPG",
       bigImage: "",
-      base: ["/images/qasr_aldiafah/2.JPG"],
+      base: ["images/qasr_aldiafah/2.JPG"],
       mid: [],
       end: [],
     },
@@ -240,9 +240,9 @@ export const works = [
     time: "74",
     progress: "30%",
     images: {
-      thumbnail: "/images/ncb-almarj/base/image1.JPG",
+      thumbnail: "images/ncb-almarj/base/image1.JPG",
       bigImage: "",
-      base: ["/images/qasr_aldiafah/2.JPG"],
+      base: ["images/qasr_aldiafah/2.JPG"],
       mid: [],
       end: [],
     },

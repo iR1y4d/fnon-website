@@ -69,9 +69,9 @@ const OurWorks = () => {
               ضخمة من المشاريع التي تمتد عبر مجالات متعددة، وكل مشروع منها يحمل
               بصمتنا الخاصة في الجودة والابتكار"
             </div>
-            <div className="flex-1 animate-up-down w-full h-full flex justify-center  ">
+            <div className="flex-1 animate-up-down w-full h-full flex justify-center">
               <img
-                src="/build.svg"
+                src="build.svg"
                 alt=""
                 className="w-180 max-lg:w-150 max-sm:w-115 "
                 loading="lazy"
