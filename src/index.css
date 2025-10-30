@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --color-primary: #0f435b;
+  /* --color-secondry: #867642; */
+  --color-secondry: #847444;
+
+  --background-image-hero-pattern: url("bg-5-1.png");
+
+  --font-kufi: Noto Kufi Arabic, sans-serif;
+}
+
+@theme {
+  --animate-shows: shows 2s;
+  @keyframes shows {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+
+  --animate-up: up 0.5s;
+  @keyframes up {
+    from {
+      bottom: -100%;
+    }
+    to {
+      bottom: 0%;
+    }
+  }
+
+  --animate-up-down: up-down 3s alternate infinite linear;
+  @keyframes up-down {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+
+  --animate-right-left: right-left 3s alternate infinite linear;
+  @keyframes right-left {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-primary font-kufi text-white overflow-y-scroll;
+  }
+}
+
+@layer components {
+  .pattern {
+    @apply bg-hero-pattern w-full h-screen bg-center bg-cover absolute z-0;
+  }
+}
+
+@utility container {
+  @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+}
+
+@utility hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  outline: none;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* .swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+} */
+
+/* @layer components {
+  .pattern {
+    @apply bg-hero-pattern w-full h-screen bg-center -bottom-5 -right-75 bg-no-repeat relative z-0 bg-size-[1500px] max-lg:bg-size-[1400px] max-lg:-right-60 max-md:-right-15 max-sm:-right-0;
+  }
+} */
