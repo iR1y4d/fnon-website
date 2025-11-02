@@ -1,11 +1,3 @@
-// import { caption } from "framer-motion/client";
-// import bigimage1 from "../images/best-of-all/bigimage1.jpg";
-// import bigimage2 from "../images/best-of-all/bigimage2.png";
-// import bigimage3 from "../images/best-of-all/bigimage3.jpg";
-// import bigimage4 from "../images/best-of-all/bigimage4.jpg";
-
-/*---------------------------------------------------------- */
-
 // util function
 // ✅ نحدد جميع المجلدات المحتملة بشكل ثابت
 const allFolders = import.meta.glob(
@@ -107,41 +99,6 @@ export const employees = [
   { name: "رياض علي", rule: "الرئيس التنفيذي" },
 ];
 
-// export const bestImages = [
-//   {
-//     id: 0,
-//     image: bigimage1,
-//     location: "المرج",
-//     title: "صالة قصر الضيافة",
-//     caption: "تضمن هذا المشروع اعادة تأهيل و تحوير المبنى الحالي للمصرف",
-//     time: 55,
-//   },
-//   {
-//     id: 1,
-//     image: bigimage2,
-//     location: "المرج",
-//     title: "مدينة صناعية",
-//     caption: "تضمن هذا المشروع اعادة تأهيل و تحوير المبنى الحالي للمصرف",
-//     time: 55,
-//   },
-//   {
-//     id: 2,
-//     image: bigimage3,
-//     location: "المرج",
-//     title: "صالة قصر الضيافة",
-//     caption: "تضمن هذا المشروع اعادة تأهيل و تحوير المبنى الحالي للمصرف",
-//     time: 55,
-//   },
-//   {
-//     id: 3,
-//     image: bigimage4,
-//     location: "المرج",
-//     title: "قصر الضيافة للمناسبات و الاجتماعات",
-//     caption: "تضمن هذا المشروع اعادة تأهيل و تحوير المبنى الحالي للمصرف",
-//     time: 55,
-//   },
-// ];
-
 export const works = [
   {
     id: 0,
@@ -153,14 +110,9 @@ export const works = [
     time: "74",
     progress: "100%",
     images: {
-      thumbnail: "images/qasr-aldiafah/2.JPG",
-      bigImage: "images/qasr-aldiafah/2.JPG",
-      base: [
-        // "/images/qasr-aldiafah/1.JPG",
-        // "/images/qasr-aldiafah/2.JPG",
-        // "/images/qasr-aldiafah/3.JPG",
-        // "/images/qasr-aldiafah/4.JPG",
-      ],
+      thumbnail: "images/thumbnails/qasr-aldiafah.avif",
+      bigImage: "images/bigImages/qasr-aldiafah.avif",
+      base: [],
       mid: [],
       end: qasrEnd,
     },
@@ -175,8 +127,8 @@ export const works = [
 
     progress: "20%",
     images: {
-      thumbnail: "images/ncb-almarj/base/image3.JPG",
-      bigImage: "images/ncb-almarj/base/image3.JPG",
+      thumbnail: "images/thumbnails/ncb-almarj.avif",
+      bigImage: "images/bigImages/ncb-almarj.avif",
       base: almarjBase,
       mid: [],
       end: [],
@@ -191,8 +143,8 @@ export const works = [
     time: "74",
     progress: "80%",
     images: {
-      thumbnail: "images/ncb-almarj/base/image5.JPG",
-      bigImage: "images/ncb-almarj/base/image5.JPG",
+      thumbnail: "images/thumbnails/ncb-tokrah.avif",
+      bigImage: "images/bigImages/ncb-tokrah.avif",
       base: tokrahBase,
       mid: tokrahMid,
       end: tokrahEnd,
@@ -208,8 +160,8 @@ export const works = [
     time: "74",
     progress: "80%",
     images: {
-      thumbnail: "images/benghazi/end/1.JPG",
-      bigImage: "src/images/benghazi/end/1.JPG",
+      thumbnail: "images/thumbnails/benghazi.avif",
+      bigImage: "images/bigImages/benghazi.avif",
       base: benghaziBase,
       mid: benghaziMid,
       end: benghaziEnd,
@@ -224,8 +176,8 @@ export const works = [
     time: "74",
     progress: "100%",
     images: {
-      thumbnail: "images/ncb-almarj/base/image4.JPG",
-      bigImage: "",
+      thumbnail: "images/thumbnails/soon.avif",
+      bigImage: "images/bigImages/soon.avif",
       base: ["images/qasr_aldiafah/2.JPG"],
       mid: [],
       end: [],
@@ -240,8 +192,8 @@ export const works = [
     time: "74",
     progress: "30%",
     images: {
-      thumbnail: "images/ncb-almarj/base/image1.JPG",
-      bigImage: "",
+      thumbnail: "images/thumbnails/soon.avif",
+      bigImage: "images/bigImages/soon.avif",
       base: ["images/qasr_aldiafah/2.JPG"],
       mid: [],
       end: [],

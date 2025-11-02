@@ -4,7 +4,10 @@ const OurEmployees = () => {
   return (
     <Element name="موظفوا الشركة">
       <section className="pb-20 ">
-        <Title name="ادارة الشركة" caption="كل موظف هو تعبير عن الفن" />
+        <Title
+          name="ادارة الشركة"
+          caption="قيادة استراتيجية نحو التميز والابتكار"
+        />
         <div className="container">
           <div className="flex items-center justify-center gap-20 max-lg:flex-col max-lg:gap-5">
             <div className="text-2xl ">
@@ -25,7 +28,7 @@ const OurEmployees = () => {
             </div>
             <div className=" relative z-10 w-600 before:content-[''] before:w-full before:h-full before:bg-secondry before:shadow-2xl before:absolute before:-z-1 before:left-10 before:top-10 max-lg:max-w-120 max-md:max-w-80  ">
               <img
-                src="ahmed1.jpeg"
+                src="ahmed.avif"
                 alt=""
                 className=" w-full h-full "
                 loading="lazy"

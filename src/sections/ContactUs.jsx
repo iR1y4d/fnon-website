@@ -20,7 +20,7 @@ const ContactUs = () => {
             </div>
 
             <div className="flex-1 max-lg:w-90">
-              <img src="/ContactUs2.svg" alt="" loading="lazy" />
+              <img src="ContactUs2.svg" alt="" loading="lazy" />
             </div>
           </div>
           <div className="flex justify-center items-center gap-10 mb-5 ">

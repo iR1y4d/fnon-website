@@ -1,33 +1,32 @@
 import os
 from PIL import Image
+import pillow_avif  # pip install pillow-avif-plugin
 
-# Make sure you have pillow-avif-plugin installed for AVIF support
-# pip install pillow pillow-avif-plugin
-
-def convert_image(input_path, output_format="webp", quality=80):
+def compress_avif(file_path, quality=75):
     try:
-        img = Image.open(input_path).convert("RGB")
-        base, _ = os.path.splitext(input_path)
-        output_path = f"{base}.{output_format}"
-        img.save(output_path, format=output_format.upper(), quality=quality)
-        print(f"Converted {input_path} -> {output_path}")
-        os.remove(input_path)  # remove the original image
+        img = Image.open(file_path).convert("RGB")
+        img.save(
+            file_path,  # overwrite original
+            format="AVIF",
+            quality=quality,
+            optimize=True
+        )
+        print(f"Compressed: {file_path}")
     except Exception as e:
-        print(f"Failed to convert {input_path}: {e}")
+        print(f"Failed: {file_path} -> {e}")
 
-def convert_folder(folder_path, output_format="webp", quality=80):
-    supported_ext = (".jpg", ".jpeg", ".png", ".bmp", ".tiff")
+def compress_folder(folder_path, quality=75):
+    folder_path = os.path.abspath(folder_path)
     for root, dirs, files in os.walk(folder_path):
         for file in files:
-            if file.lower().endswith(supported_ext):
+            if file.lower().endswith(".avif"):
                 file_path = os.path.join(root, file)
-                convert_image(file_path, output_format, quality)
+                compress_avif(file_path, quality)
 
 if __name__ == "__main__":
-    folder = os.getcwd()  # Automatically use current directory
-    output_format = "avif"  # Change to "webp" if you prefer
-    quality = 85  # Compression quality (1-100)
-
-    print(f"Converting images in: {folder}")
-    convert_folder(folder, output_format, quality)
-    print("Conversion complete!")
+    # Automatically detect the folder where this script is located
+    folder = os.path.dirname(os.path.abspath(__file__))
+    quality = 65  # adjust 70-85 for smaller size
+    print(f"Compressing all AVIF images in: {folder} and subfolders")
+    compress_folder(folder, quality)
+    print("Compression complete!")

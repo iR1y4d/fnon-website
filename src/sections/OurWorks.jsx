@@ -62,9 +62,9 @@ const OurWorks = () => {
             </div>
           </Link>
         </div> */}
-        <div className="px-10 max-lg:px-5">
+        <div className=" max-lg:px-5 max-w-[1500px] px-16 max-xl:px-10  max-sm:px-4 mx-auto">
           <div className="flex justify-center items-center max-lg:flex-col-reverse gap-10">
-            <div className="flex-1 text-4xl font-light leading-17 text-center max-xl:text-2xl max-md:leading-13 ">
+            <div className="flex-1 text-4xl font-light leading-13 text-center max-xl:text-2xl max-md:leading-13 ">
               "نحن لا نقدم مجرد خدمات، بل نروي قصة نجاح متكاملة من خلال مجموعة
               ضخمة من المشاريع التي تمتد عبر مجالات متعددة، وكل مشروع منها يحمل
               بصمتنا الخاصة في الجودة والابتكار"

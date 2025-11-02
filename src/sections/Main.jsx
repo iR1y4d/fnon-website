@@ -23,9 +23,10 @@ const Main = () => {
   }, [location]);
 
   return (
+    // bg-[url('https://ir1y4d.github.io/fnon-website/bg-6.avif')]
     <Element name="الرئيسية">
       <section className="relative overflow-hidden">
-        <div className="bg-[url('https://ir1y4d.github.io/fnon-website/bg-6.png')] w-full h-screen bg-no-repeat bg-size-[1400px] absolute opacity-80" />
+        <div className="bg-[url('bg-6.avif')] w-full h-screen bg-no-repeat bg-size-[1400px] absolute opacity-80" />
 
         {/* Main Text Section */}
         <div className="relative flex flex-col justify-center max-lg:justify-end h-screen px-10 max-sm:px-5">
@@ -61,7 +62,7 @@ const Main = () => {
                 <img
                   src={icon}
                   alt=""
-                  className="w-35 h-auto object-contain opacity-90 hover:opacity-100 transition max-lg:w-35"
+                  className="w-35 duration-500 h-auto object-contain opacity-70 hover:opacity-100 transition max-lg:w-35"
                   loading="lazy"
                 />
               </SwiperSlide>

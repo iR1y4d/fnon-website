@@ -12,7 +12,7 @@ const WorkCard = ({
         <div className="absolute z-5 right-2 top-2 text-white/70 text-[23px] font-light group-hover:text-secondry duration-400">
           {location}
         </div>
-        <div className="overflow-hidden xl:h-82 lg:h-62 max-lg:h-113 max-md:h-80 max-sm:h-65">
+        <div className="overflow-hidden xl:h-75 lg:h-62 max-lg:h-113 max-md:h-80 max-sm:h-65">
           <img
             src={images.thumbnail}
             alt=""
