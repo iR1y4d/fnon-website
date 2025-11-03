@@ -2,10 +2,10 @@ const Footer = () => {
   const getYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#ffffff6e]">
-      <div className="h-20 flex justify-center items-center gap-10 text-primary">
-        <div className="px-10 w-full flex items-start justify-around">
-          <div>
+    <footer className="bg-[#ffffff6e] ">
+      <div className="md:h-20 flex  justify-center items-center gap-10 text-primary">
+        <div className="px-10 max-md:px-5 max-md:gap-2 w-full flex items-start justify-around max-md:flex-col max-md:items-center">
+          <div className="max-md:text-[13px]">
             <p>092 555 5865</p>
             <p>091 724 0771</p>
           </div>
@@ -15,7 +15,7 @@ const Footer = () => {
             <h1>مدينة المرج, بجانب مطاحن المرج (السيلس)</h1>
           </div>
 
-          <h1>fnonalhandsa@gmail.com</h1>
+          <h1 className="max-md:text-[13px]">fnonalhandsa@gmail.com</h1>
         </div>
       </div>
     </footer>
