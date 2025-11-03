@@ -26,7 +26,7 @@ const Main = () => {
     // bg-[url('https://ir1y4d.github.io/fnon-website/bg-6.avif')]
     <Element name="الرئيسية">
       <section className="relative overflow-hidden">
-        <div className="bg-[url('bg-6.avif')] w-full h-screen bg-no-repeat bg-size-[1400px] absolute opacity-80" />
+        <div className="bg-[url('https://ir1y4d.github.io/fnon-website/bg-6.avif')] w-full h-screen bg-no-repeat bg-size-[1400px] absolute opacity-80" />
 
         {/* Main Text Section */}
         <div className="relative flex flex-col justify-center max-lg:justify-end h-screen px-10 max-sm:px-5">

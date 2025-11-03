@@ -10,7 +10,6 @@ createRoot(document.getElementById("root")).render(
     {/* <BrowserRouter basename="/fnon-website">
       <App />
     </BrowserRouter> */}
-    ReactDOM.createRoot(document.getElementById("root")).render(
     <HashRouter>
       <App />
     </HashRouter>

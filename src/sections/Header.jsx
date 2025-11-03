@@ -121,7 +121,7 @@ const Header = () => {
               <img
                 src="menu-internal-icon.png"
                 alt="icon"
-                className="lg:hidden max-lg:-bottom-16 max-md:left-0 max-md:-bottom-10 max-sm:left-0 absolute -bottom-100 -left-5 opacity-50"
+                className="lg:hidden max-lg:bottom-0 max-lg:left-0 absolute opacity-50"
                 loading="lazy"
               />
             )}

@@ -1,13 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { works } from "../constant";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Thumbs, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-
-import clsx from "clsx";
+import PhaseSection from "../components/PhaseSection";
 import Title from "../components/Title";
 
 import Lightbox from "yet-another-react-lightbox";
@@ -15,9 +9,6 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 
 const MainWorkPage = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -63,113 +54,6 @@ const MainWorkPage = () => {
     setIsLightboxOpen(true);
   };
 
-  const PhaseSection = ({
-    title,
-    slides = [],
-    sectionKey,
-    isOpen,
-    onToggle,
-  }) => {
-    const localMainSwiperRef = useRef(null);
-    const [localThumbs, setLocalThumbs] = useState(null);
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    return (
-      <div className="mb-10">
-        <button
-          type="button"
-          onClick={onToggle}
-          aria-expanded={isOpen}
-          className="w-full text-left cursor-pointer flex justify-between items-center bg-[#ffffff10] px-5 py-3 rounded-xl hover:bg-[#ffffff15] transition"
-        >
-          <h2 className="text-3xl font-bold">{title}</h2>
-          <motion.div
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.28 }}
-            className="ml-3"
-          >
-            <ChevronDown size={24} />
-          </motion.div>
-        </button>
-
-        <AnimatePresence initial={false}>
-          {isOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 190 }}
-              className="overflow-hidden"
-            >
-              <div className="w-full md:w-[85%] lg:w-[70%] pb-10 relative flex flex-col items-center gap-5 mt-6 px-3 sm:px-6 md:px-10 mx-auto">
-                {/* Main Swiper */}
-                <Swiper
-                  modules={[Navigation, Thumbs, Autoplay]}
-                  navigation
-                  loop
-                  autoplay={isLightboxOpen ? false : { delay: 5000 }}
-                  thumbs={{ swiper: localThumbs }}
-                  onSwiper={(swiper) => (localMainSwiperRef.current = swiper)}
-                  onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                  className="w-full h-[52vh] sm:h-[62vh] md:h-[72vh] rounded-xl"
-                >
-                  {slides.map((slide, index) => (
-                    <SwiperSlide key={index}>
-                      <motion.img
-                        src={slide.src} // ✅ native browser lazy
-                        loading="lazy"
-                        className="w-full h-full object-cover cursor-pointer rounded-md"
-                        alt={`slide-${index}`}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.45 }}
-                        onClick={() => openLightbox(slides, index)}
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-
-                {/* Thumbnail Swiper */}
-                <Swiper
-                  onSwiper={(s) => setLocalThumbs(s)}
-                  spaceBetween={10}
-                  freeMode
-                  watchSlidesProgress
-                  modules={[Thumbs]}
-                  breakpoints={{
-                    0: { slidesPerView: 2 },
-                    640: { slidesPerView: 3 },
-                    1024: { slidesPerView: 4 },
-                  }}
-                  className="w-full max-w-5xl h-[110px]"
-                >
-                  {slides.map((slide, index) => (
-                    <SwiperSlide key={index}>
-                      <img
-                        src={slide.src} // ✅ native browser lazy
-                        loading="lazy"
-                        className={clsx(
-                          "w-full h-full object-cover cursor-pointer rounded-md transition-all duration-300",
-                          activeIndex === index
-                            ? "ring-4 ring-secondry scale-105"
-                            : "opacity-80 hover:opacity-100"
-                        )}
-                        alt={`thumb-${index}`}
-                        onClick={() =>
-                          localMainSwiperRef.current?.slideToLoop(index)
-                        }
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    );
-  };
-
   return (
     <main className="overflow-hidden">
       {/* Cover Image */}
@@ -182,9 +66,9 @@ const MainWorkPage = () => {
         />
       </div>
 
-      <div className="container">
-        <div>
-          <div className="flex justify-start items-center gap-5 mt-10 mb-1">
+      <div className="container px-6 lg:px-16 mt-10">
+        <div className="flex flex-col gap-4">
+          <div>
             <h1 className="text-4xl font-bold">{decodedTitle}</h1>
           </div>
 
@@ -194,9 +78,10 @@ const MainWorkPage = () => {
             <h3>{work.location}</h3>
           </div>
 
+          {/* Progress Bar */}
           <div className="mt-3 text-[#ffffffe3]">
             <div className="flex justify-between">
-              <p>نسبة الانجاز</p>
+              <p>نسبة الإنجاز</p>
               <p>{work.progress}</p>
             </div>
             <div className="w-full h-2 bg-[#ffffff30] rounded-full mt-1 overflow-hidden">
@@ -207,6 +92,7 @@ const MainWorkPage = () => {
             </div>
           </div>
 
+          {/* About Section */}
           <section className="mb-20">
             <div>
               <h2 className="text-4xl mt-10 mb-5">نبذة عن المشروع</h2>
@@ -216,8 +102,8 @@ const MainWorkPage = () => {
             </div>
 
             <div>
-              <h2 className="text-4xl mt-10 mb-5">اهم النقاط</h2>
-              <ul className="list-disc text-2xl font-light space-y-5">
+              <h2 className="text-4xl mt-10 mb-5">أهم النقاط</h2>
+              <ul className="list-disc text-2xl font-light space-y-5 ml-5">
                 <li>{work.caption}</li>
                 <li>{work.caption}</li>
                 <li>{work.caption}</li>
@@ -225,6 +111,7 @@ const MainWorkPage = () => {
             </div>
           </section>
 
+          {/* Title Component */}
           <Title
             name="التوثيق المرئي للمشروع"
             caption="نوثق فنوننا لحظة بلحظة"
@@ -246,6 +133,7 @@ const MainWorkPage = () => {
                 : [...prev, "end"]
             )
           }
+          openLightbox={openLightbox}
         />
       )}
 
@@ -262,6 +150,7 @@ const MainWorkPage = () => {
                 : [...prev, "mid"]
             )
           }
+          openLightbox={openLightbox}
         />
       )}
 
@@ -278,6 +167,7 @@ const MainWorkPage = () => {
                 : [...prev, "base"]
             )
           }
+          openLightbox={openLightbox}
         />
       )}
 
