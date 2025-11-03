@@ -9,10 +9,12 @@ import Works from "./sections/Works";
 import MainWorkPage from "./sections/MainWorkPage";
 import Footer from "./sections/Footer";
 import OurEmployees from "./sections/OurEmployees";
+import ScrollToTop from "./ultis/ScrollToTop";
 
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route
