@@ -90,11 +90,13 @@ const Header = () => {
     >
       <div className="container h-25 flex gap-20 items-center justify-between relative duration-500">
         <div className="max-lg:container flex items-center justify-between">
-          <img
-            src="icon.png"
-            alt="icon"
-            className="cursor-pointer relative z-1 w-25 max-lg:w-22"
-          />
+          <Link to="/">
+            <img
+              src="icon.png"
+              alt="icon"
+              className="cursor-pointer relative z-1 w-25 max-lg:w-22"
+            />
+          </Link>
           <img
             src={isOpen ? "close.svg" : "menu.svg"}
             alt="menu"
