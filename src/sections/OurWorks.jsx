@@ -63,11 +63,12 @@ const OurWorks = () => {
           </Link>
         </div> */}
         <div className=" max-lg:px-5 max-w-[1500px] px-16 max-xl:px-10  max-sm:px-4 mx-auto">
-          <div className="flex justify-center items-center max-lg:flex-col-reverse gap-10">
-            <div className="flex-1 text-4xl font-light leading-13 text-center max-xl:text-2xl max-md:leading-13 ">
-              "نحن لا نقدم مجرد خدمات، بل نروي قصة نجاح متكاملة من خلال مجموعة
-              ضخمة من المشاريع التي تمتد عبر مجالات متعددة، وكل مشروع منها يحمل
-              بصمتنا الخاصة في الجودة والابتكار"
+          <div className="flex justify-center items-center max-lg:flex-col-reverse gap-10 max-lg:gap-5">
+            <div className="flex-1 text-4xl font-light leading-13 text-center max-xl:text-3xl max-md:text-2xl max-lg:leading-11 ">
+              <span className="text-secondry">"</span>نحن لا نقدم مجرد خدمات، بل
+              نروي قصة نجاح متكاملة من خلال مجموعة ضخمة من المشاريع التي تمتد
+              عبر مجالات متعددة، وكل مشروع منها يحمل بصمتنا الخاصة في الجودة
+              والابتكار<span className="text-secondry">"</span>
             </div>
             <div className="flex-1 animate-up-down w-full h-full flex justify-center">
               <img

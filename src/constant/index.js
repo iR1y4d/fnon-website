@@ -47,7 +47,7 @@ export const navLinks = [
   { name: "الرئيسية", link: "#" },
   { name: "خدماتنا", link: "#" },
   { name: "أعمالنا", link: "#" },
-  { name: "ادارة الشركة", link: "#" },
+  { name: "إدارة الشركة", link: "#" },
   { name: "تواصل معنا", link: "#" },
 ];
 

@@ -2,10 +2,10 @@ import { Element } from "react-scroll";
 import Title from "../components/Title";
 const OurEmployees = () => {
   return (
-    <Element name="موظفوا الشركة">
+    <Element name="إدارة الشركة">
       <section className="pb-20 ">
         <Title
-          name="ادارة الشركة"
+          name="إدارة الشركة"
           caption="قيادة استراتيجية نحو التميز والابتكار"
         />
         <div className="container">
