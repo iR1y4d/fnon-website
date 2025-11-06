@@ -115,18 +115,25 @@ const PhaseSection = ({
               >
                 {slides.map((slide, index) => (
                   <SwiperSlide key={index}>
-                    <img
-                      src={slide.src}
-                      loading="lazy"
-                      className={clsx(
-                        "w-full h-full object-cover cursor-pointer rounded-md transition-all duration-300",
-                        activeIndex === index
-                          ? "ring-4 ring-secondry scale-105"
-                          : "opacity-80 hover:opacity-100"
-                      )}
-                      alt={`thumb-${index}`}
-                      onClick={() => mainSwiperRef.current?.slideToLoop(index)}
-                    />
+                    <div className="image-wrapper loading">
+                      <img
+                        src={slide.src}
+                        loading="lazy"
+                        className={clsx(
+                          "w-full h-full object-cover cursor-pointer rounded-md transition-all duration-300",
+                          activeIndex === index
+                            ? "ring-4 ring-secondry scale-105"
+                            : "opacity-80 hover:opacity-100"
+                        )}
+                        alt={`thumb-${index}`}
+                        onClick={() =>
+                          mainSwiperRef.current?.slideToLoop(index)
+                        }
+                        onLoad={(e) =>
+                          e.target.parentElement.classList.remove("loading")
+                        }
+                      />
+                    </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
