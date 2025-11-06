@@ -99,3 +99,37 @@
     @apply bg-hero-pattern w-full h-screen bg-center -bottom-5 -right-75 bg-no-repeat relative z-0 bg-size-[1500px] max-lg:bg-size-[1400px] max-lg:-right-60 max-md:-right-15 max-sm:-right-0;
   }
 } */
+/* ********************************************************************
+/* Simple lightweight spinner */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.image-wrapper.loading::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.15);
+  mask: radial-gradient(circle closest-side, transparent 70%, black 71%);
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
