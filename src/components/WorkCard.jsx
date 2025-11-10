@@ -13,12 +13,14 @@ const WorkCard = ({
           {location}
         </div>
         <div className="overflow-hidden xl:h-75 lg:h-62 max-lg:h-113 max-md:h-80 max-sm:h-65">
-          <img
-            src={images.thumbnail}
-            alt=""
-            className="group-hover:scale-103 duration-500 w-full h-full"
-            loading="lazy"
-          />
+          <div className="image-wrapper loading">
+            <img
+              src={images.thumbnail}
+              alt=""
+              className="group-hover:scale-103 duration-500 w-full h-full"
+              loading="lazy"
+            />
+          </div>
         </div>
         <div className="flex flex-col gap-3 justify-start p-5 overflow-hidden relative after:content-[''] after:w-full after:h-full after:absolute after:left-0 after:-bottom-full group-hover:after:-bottom-0 after:bg-secondry after:z-1 after:duration-150">
           <div className="relative z-5">

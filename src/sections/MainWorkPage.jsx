@@ -58,12 +58,14 @@ const MainWorkPage = () => {
     <main className="overflow-hidden">
       {/* Cover Image */}
       <div className="lg:h-[70vh] w-full bg-center bg-no-repeat relative overflow-hidden">
-        <img
-          src={work.images.bigImage}
-          alt="cover"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+        <div className="image-wrapper loading">
+          <img
+            src={work.images.bigImage}
+            alt="cover"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
       </div>
 
       <div className="container px-6 lg:px-16 mt-10">
