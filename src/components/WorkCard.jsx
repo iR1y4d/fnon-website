@@ -19,6 +19,7 @@ const WorkCard = ({
               alt=""
               className="group-hover:scale-103 duration-500 w-full h-full"
               loading="lazy"
+              onLoad={(e) => e.target.parentElement.classList.remove("loading")}
             />
           </div>
         </div>

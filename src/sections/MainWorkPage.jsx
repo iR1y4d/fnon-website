@@ -64,6 +64,7 @@ const MainWorkPage = () => {
             alt="cover"
             className="w-full h-full object-cover"
             loading="lazy"
+            onLoad={(e) => e.target.parentElement.classList.remove("loading")}
           />
         </div>
       </div>
